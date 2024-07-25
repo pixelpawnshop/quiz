@@ -74,6 +74,11 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        .counter {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
     </style>
     <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
@@ -198,6 +203,9 @@
                     </form>
                     {quizData && (
                         <div>
+                            <div className="counter">
+                                Question {currentQuestionIndex + 1} of {quizData.length}
+                            </div>
                             <h2>Quiz Questions:</h2>
                             <div>
                                 <h3>{he.decode(quizData[currentQuestionIndex].question)}</h3>
